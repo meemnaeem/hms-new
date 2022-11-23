@@ -28966,7 +28966,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-var appName = ((_window$document$getE = window.document.getElementsByTagName('title')[0]) === null || _window$document$getE === void 0 ? void 0 : _window$document$getE.innerText) || 'Laravel';
+var appName = ((_window$document$getE = window.document.getElementsByTagName("title")[0]) === null || _window$document$getE === void 0 ? void 0 : _window$document$getE.innerText) || "Laravel";
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
   title: function title(_title) {
     return "".concat(_title, " - ").concat(appName);
@@ -28987,7 +28987,7 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName('ti
   }
 });
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
-  color: '#4B5563'
+  color: "#4B5563"
 });
 
 /***/ }),
@@ -29054,7 +29054,7 @@ function r(r, n, e) {
 }
 
 function n() {
-  return n = Object.assign || function (t) {
+  return n = Object.assign ? Object.assign.bind() : function (t) {
     for (var r = 1; r < arguments.length; r++) {
       var n = arguments[r];
 
@@ -29068,13 +29068,13 @@ function n() {
 }
 
 function e(t) {
-  return e = Object.setPrototypeOf ? Object.getPrototypeOf : function (t) {
+  return e = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
     return t.__proto__ || Object.getPrototypeOf(t);
   }, e(t);
 }
 
 function o(t, r) {
-  return o = Object.setPrototypeOf || function (t, r) {
+  return o = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, r) {
     return t.__proto__ = r, t;
   }, o(t, r);
 }
@@ -29092,7 +29092,7 @@ function i() {
 }
 
 function u(t, r, n) {
-  return u = i() ? Reflect.construct : function (t, r, n) {
+  return u = i() ? Reflect.construct.bind() : function (t, r, n) {
     var e = [null];
     e.push.apply(e, r);
     var i = new (Function.bind.apply(t, e))();
@@ -29672,7 +29672,7 @@ var a = String.prototype.replace,
     return Object.keys(this.t.routes).includes(t);
   }, f.l = function (t, r) {
     var e = this;
-    void 0 === t && (t = {}), void 0 === r && (r = this.i), t = ["string", "number"].includes(_typeof(t)) ? [t] : t;
+    void 0 === t && (t = {}), void 0 === r && (r = this.i), null != t || (t = {}), t = ["string", "number"].includes(_typeof(t)) ? [t] : t;
     var o = r.parameterSegments.filter(function (t) {
       return !e.t.defaults[t.name];
     });
